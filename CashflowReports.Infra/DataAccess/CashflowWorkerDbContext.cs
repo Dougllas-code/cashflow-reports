@@ -7,5 +7,6 @@ namespace CashFlow.Infra.DataAccess
     {
         public CashFlowWorkerDbContext(DbContextOptions options) : base(options) { }
         public DbSet<Expense> Expenses { get; set; }
+        public DbSet<ReportRequests> ReportRequests { get; set; }
     }
 }

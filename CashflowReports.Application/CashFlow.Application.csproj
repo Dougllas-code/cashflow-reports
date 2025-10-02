@@ -7,8 +7,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Factory\Generator\PDF\Fonts\Raleway-Black.ttf" />
+    <None Remove="Factory\Generator\PDF\Fonts\Raleway-Regular.ttf" />
+    <None Remove="Factory\Generator\PDF\Fonts\WorkSans-Black.ttf" />
+    <None Remove="Factory\Generator\PDF\Fonts\WorkSans-Regular.ttf" />
+    <None Remove="Factory\Generator\PDF\Logo\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Factory\Generator\PDF\Fonts\Raleway-Black.ttf" />
+    <EmbeddedResource Include="Factory\Generator\PDF\Fonts\Raleway-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Generator\PDF\Fonts\WorkSans-Black.ttf" />
+    <EmbeddedResource Include="Factory\Generator\PDF\Fonts\WorkSans-Regular.ttf" />
+    <EmbeddedResource Include="Factory\Generator\PDF\Logo\user.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.105.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
+    <PackageReference Include="PDFsharp-MigraDoc" Version="6.2.2" />
   </ItemGroup>
 
   <ItemGroup>

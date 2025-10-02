@@ -23,6 +23,8 @@ namespace CashFlow.Infra
         {
             services.AddScoped<IRabbitMqConsumerService, EventReportRequestedConsumer>();
             services.AddScoped<IExpensesReadOnlyRepository, ExpenseRepository>();
+            services.AddScoped<IReportRequestReadOnlyRepository, ReportRequestRepository>();
+            services.AddScoped<IReportRequestUpdateOnlyRepository, ReportRequestRepository>();
         }
 
         private static void AddDbContext(IServiceCollection services, IConfiguration configuration)
