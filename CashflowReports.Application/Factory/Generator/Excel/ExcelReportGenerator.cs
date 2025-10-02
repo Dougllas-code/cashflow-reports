@@ -8,7 +8,6 @@ namespace CashFlow.Application.Factory.Generator.Excel
     internal class ExcelReportGenerator : IReportGenerator
     {
         private const string CURRENCY_SYMBOL = "R$";
-        public string ReportType => throw new NotImplementedException();
 
         public byte[] GenerateAsync(List<Expense> expenses, DateOnly month)
         {
